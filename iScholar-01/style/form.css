@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    border:none;
+}
+
+.menu{
+    width: 25%;
+    height: 500px;
+    background-color: red;
+    box-sizing: border-box;
+    z-index: 10000000;
+}
+.right-content{
+    width: 100%;
+    height: 500px;
+    /*background-color: #264E8B;*/
+    position: relative;
+    box-sizing: border-box;
+}
+
+.form-group{
+    margin-bottom: 1rem !important;
+}
+input{
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+}
+.page-1{
+    /*background-color: #264E8B;*/
+    position: absolute;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+
+}
+.page-2{
+    /*background-color: green;*/
+    position: absolute;
+    visibility: hidden;  
+    height: 100%;
+    width: 100%;
+}
+.page-3{
+    /*background-color: yellow;*/
+    position: absolute; 
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+}
+.btn{
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 50%;
+    font-size: 24px !important;
+}
+.next-btn{
+    position: absolute;
+     right: 29px;
+    bottom: 40px;
+}
+.prev-btn{
+    position: absolute;
+    right: 116px;
+    bottom: 40px;
+}
+.prev-btn-3{
+    position: absolute;
+    right: 142px;
+    bottom: 40px;
+}
+.gen-btn{
+     position: absolute;
+    right: 10px;
+    bottom: 40px;
+}
+.show{
+    visibility: visible;
+}
+.indicator{
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    bottom: 40px;
+    left: 40px;
+
+}
+span{
+    border-radius: 50%;
+    margin-left: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: #E5F0FF;
+    opacity: 0.6;
+}
+.active{
+    opacity: 1;
+}
+select{
+    background-color: transparent;
+    outline: 0 !important;
+    border-width: 0 0 2px !important;
+}
+select:hover{
+    border-color: #264E8B !important;
+}
+input {
+    background-color: transparent;
+    outline: 0 !important;
+    border-width: 0 0 2px !important;
+    border-color: black !important;
+}
+input:focus {
+    border-color: #264E8B !important;
+}
