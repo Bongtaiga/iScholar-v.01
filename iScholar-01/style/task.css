@@ -1,0 +1,91 @@
+body{
+    /*font-size: 12px;*/
+}
+.flex-container{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.header{
+    height: 200%;
+}
+.titleName{
+    margin-left: 0;
+    background-color: white;
+}
+
+.taskAndPhrases{
+    width: 100%;
+}
+.task {
+    background-color: #F1F1F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    font-size: 15px;
+    flex: 0.5;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
+    text-transform: uppercase;
+}
+
+.task li{
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: black;
+    padding: 10px;
+}
+.task button {
+    margin-left: 0;
+    text-decoration: none;
+    color: black;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+
+.task button:hover {
+    font-family: 'Montserrat';
+    text-decoration-color: #00B4DB;
+    margin-left: 0;
+    text-decoration: none;
+    color: black;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+
+.task button:focus {
+    font-family: 'Montserrat';
+    text-decoration-color: #00B4DB;
+    margin-left: 0;
+    text-decoration: none;
+    color: black;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+
+.phrases {
+    background-size: cover;
+    text-align: left;
+    font-size: 15px;
+    background-position: center;
+    flex: 0.9;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
+}
+.phrases li {
+    color: black;
+    font-size: 1.3em;
+    border-top: 2px solid gray;
+    list-style: none;
+    position: relative;
+    width: 99%;
+    padding: 10px;
+}
+
