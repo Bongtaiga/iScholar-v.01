@@ -28,7 +28,7 @@ $contentArray = array(
 
 $content = json_encode($contentArray);
 $opts = array(
-    CURLOPT_URL => 'http://ischolar.org/api/v1/gendoc',
+    CURLOPT_URL => 'http://ischolar.df.r.appspot.com/api/v1/gendoc',
     CURLOPT_RETURNTRANSFER => TRUE,
     CURLOPT_SSL_VERIFYPEER => false,
     CURLOPT_CUSTOMREQUEST => 'POST',
