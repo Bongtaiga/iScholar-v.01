@@ -18,7 +18,7 @@
 <?php
 if (isset($_GET['taskID'])) {
 $id = $_GET['taskID'];
-$url2 = "http://ischolar.org/api/v1/part/$id";
+$url2 = "http://ischolar.df.r.appspot.com/api/v1/part/$id";
 $ch2 = curl_init();
 curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch2, CURLOPT_URL, $url2);
