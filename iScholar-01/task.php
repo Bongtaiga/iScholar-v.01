@@ -15,19 +15,9 @@ include "./nav.html";
     <link rel="stylesheet" type="text/css" href="./style/task.css" >
     <!--    fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <script>
-        $(document).ready(function(){
-            $(".phraseID").click(function () {
-                // alert($('div').length);
-                var idValue = $(this).val();
-                $.get("phrase.php",{taskID: idValue }, function (data) {
-                    $("#phrase").html(data)
-                });
-            });
-        });
-    </script>
 </head>
 <?php
+error_reporting(E_ALL);
 $sectionID = $_GET['sectionID'];
 $url =  "http://ischolar.df.r.appspot.com/api/v1/sections";
 $ch = curl_init();
@@ -61,7 +51,7 @@ $jsonArr = json_decode($result, true);
                     if ($sectionID == $section['id']){
                         foreach ($section['listPart'] as $task){
                             ?>
-                            <li><button class="phraseID myBtn" value="<?php echo  $task['id'] ?>"><?php echo  $task['name']?></button></li>
+                            <li><button class="phraseID" value="<?php echo  $task['id'] ?>"><?php echo  $task['name']?></button></li>
                             <?php
                         }
                     }
@@ -77,7 +67,17 @@ $jsonArr = json_decode($result, true);
         </div>
     </div>
 </div>
-
+<script>
+    $(document).ready(function(){
+        $(".phraseID").click(function () {
+            // alert($('div').length);
+            var idValue = $(this).val();
+            $.get("phrase.php",{taskID: idValue }, function (data) {
+                $("#phrase").html(data)
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
