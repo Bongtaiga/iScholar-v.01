@@ -29,7 +29,7 @@ include "./nav.html";
 </head>
 <?php
 $sectionID = $_GET['sectionID'];
-$url =  "http://ischolar.org/api/v1/sections";
+$url =  "http://ischolar.df.r.appspot.com/api/v1/sections";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_URL, $url);
