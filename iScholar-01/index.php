@@ -13,11 +13,11 @@ include "./nav.html";
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style/nav.css" >
     <link rel="stylesheet" type="text/css" href="./style/section.css" >
-<!--    fonts-->
+    <!--    fonts-->
 </head>
 <body>
 <?php
-$url =  'http://ischolar.org/api/v1/sections';
+$url =  'http://ischolar.df.r.appspot.com/api/v1/sections';
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -28,18 +28,18 @@ $jsonObj = json_decode($result);
 $jsonArr = json_decode($result, true);
 ?>
 <div class="flex-container">
-<?php
-foreach ($jsonArr as $item => $Section){
-    ?>
-    <div class="item">
-        <a href="task.php?sectionID=<?php echo $Section['id'] ?>">
-            <!--                    <img src="./message.png" width="150" height="150"/>-->
-            <p><?php echo $Section['name'] ?></p>
-        </a>
-    </div>
     <?php
-}
-?>
+    foreach ($jsonArr as $item => $Section){
+        ?>
+        <div class="item">
+            <a href="task.php?sectionID=<?php echo $Section['id'] ?>">
+                <!--                    <img src="./message.png" width="150" height="150"/>-->
+                <p><?php echo $Section['name'] ?></p>
+            </a>
+        </div>
+        <?php
+    }
+    ?>
 </div>
 </body>
 </html>
